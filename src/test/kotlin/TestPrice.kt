@@ -18,22 +18,23 @@ abstract class TestPrice {
         this.rules = null
     }
     @Test
-    @Throws(Exception::class) 
-    fun testTotal() {
-        assertEquals(0, price("").toLong())
-        assertEquals(50, price("A").toLong())
-        assertEquals(80, price("AB").toLong())
-        assertEquals(115, price("CDBA").toLong())
-        assertEquals(100, price("AA").toLong())
-        assertEquals(130, price("AAA").toLong())
-        assertEquals(180, price("AAAA").toLong())
-        assertEquals(230, price("AAAAA").toLong())
-        assertEquals(260, price("AAAAAA").toLong())
-        assertEquals(160, price("AAAB").toLong())
-        assertEquals(175, price("AAABB").toLong())
-        assertEquals(190, price("AAABBD").toLong())
-        assertEquals(190, price("DABABA").toLong())
+    @Throws(Exception::class)
+  fun testTotal() {
+    assertEquals(0, price(""))
+    assertEquals(50, price("A"))
+    assertEquals(80, price("AB"))
+    assertEquals(115, price("CDBA"))
+    assertEquals(100, price("AA"))
+    assertEquals(130, price("AAA"))
+    assertEquals(180, price("AAAA"))
+    assertEquals(230, price("AAAAA"))
+    assertEquals(260, price("AAAAAA"))
+    assertEquals(160, price("AAAB"))
+    assertEquals(175, price("AAABB"))
+    assertEquals(190, price("AAABBD"))
+    assertEquals(190, price("DABABA"))
     }
+    
     @Test
     @Throws(Exception::class)
     fun testIncremental() {
