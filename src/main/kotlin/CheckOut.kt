@@ -37,9 +37,6 @@ object CheckOut {
         pr.closePurchase()
     }
 
-    //Objetos com invoke() podem ser chamados como uma função
-    // operator fun invoke(priceRule: PriceRule): Any {
-    //   return CheckOut
-    //}
+    
 }
 
