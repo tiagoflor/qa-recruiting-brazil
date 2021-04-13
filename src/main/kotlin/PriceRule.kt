@@ -17,14 +17,13 @@ class PriceRule {
     internal var randomGenerator = 0
 
 
-    fun addingItem(item: String) { //parametro string item
-        //função tem como finalidade calcular a quant de itens recebidos a partir da função calcula aplicar o desconto
+    fun addingItem(item: String) { 
         when (item) {
-            "A" -> { // se item for igual a A
-                ++quantityItemA //adiciona quantidade A
+            "A" -> { 
+                ++quantityItemA 
                 calculateItemA()
             }
-            "B" -> { //só muda tipo de item
+            "B" -> { 
                 ++quantityItemB
                 calculateItemB()
             }
@@ -65,28 +64,14 @@ fun calculateItemB() {
             specialPriceB = 1
         }
         1 -> {
-            itemB = itemB + 15 // no segundo item passará a valer 15 segundo desconto aplicado
+            itemB = itemB + 15 
             println(" Item B adicionado , devido a promoção da semana a unidade terá  50% de desconto e o valor passará a ser 15 centavos, totalB:  $itemB")
             specialPriceB = 0
         }
     }
 }
 
-   /* fun calculateItemB() {
-    if (specialPriceB == 0)
-    {
-        itemB = itemB + 30
-        println(" Item B adicionado, seu valor unitario é 30 centavos, totalB: $itemB")
-        specialPriceB = 1
-    }
-    else if (specialPriceB == 1)
-    {
-        itemB = itemB + 15 // no segundo item passará a valer 15 segundo desconto aplicado
-        println(" Item B adicionado , devido a promoção da semana a unidade terá  50% de desconto e o valor passará a ser 15 centavos, totalB:  $itemB")
-        specialPriceB = 0
-    }
- }*/
-
+  
 
 fun calculateItemC() {
     itemC = itemC + 20
@@ -96,7 +81,7 @@ fun calculateItemD() {
     itemD = itemD + 15
     println("Item D adicionado ao Carrinho, seu valor unitário é 15, totalD: $itemD")
     }
-fun closePurchase() {//Faz o calculo total somando todos os itens e a quantidade comprada
+fun closePurchase() {
     totalPurchases = itemA + itemB + itemC + itemD
     purchasedItems = quantityItemA + quantityItemB + quantityItemC + quantityItemD
     println("\n ***FECHANDO COMPRA***")
@@ -119,8 +104,7 @@ private fun reset() {
 
 fun randomItems():Int {
     val randomValues = Random()
-    randomGenerator = randomValues.nextInt((5) + 1)/* limite maximo de um unico item por Carrinho (valor maximo de 5 itens no carrinho recebendo maximo +1)
-                                         aleatorio.nextInt((max - min) + 1) + min;*/
+    randomGenerator = randomValues.nextInt((5) + 1)
     return randomGenerator
     }
 
