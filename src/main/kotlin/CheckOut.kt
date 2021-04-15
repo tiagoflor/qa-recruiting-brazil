@@ -3,32 +3,33 @@ object CheckOut {
     fun main(args: Array<String>) {
         var quantityItem = 0
         var i = 0
-        val pr = PriceRule() //instancia da regra carrinho regra para usar na classe
+        val pr = PriceRule()
         println("\nCARRINHO ABERTO!")
 
 
-        quantityItem = pr.randomItems()//Sorteio da quantidade do  A que vai ser adionado
+        //Random Itens A/B/C/D
+        quantityItem = pr.randomItems()
         while (i < quantityItem) {
             pr.addingItem("A")
             i++
         }
         i = 0
 
-        quantityItem = pr.randomItems()//Sorteio a quantidade do  B que vai ser adionado
+        quantityItem = pr.randomItems()
         while (i < quantityItem) {
             pr.addingItem("B")
             i++
         }
         i = 0
 
-        quantityItem = pr.randomItems()//Sorteio a quantidade do  C que vai ser adicionado
+        quantityItem = pr.randomItems()
         while (i < quantityItem) {
             pr.addingItem("C")
             i++
         }
         i = 0
 
-        quantityItem = pr.randomItems()//Sorteio a quantidade do  D que vai ser adicionado
+        quantityItem = pr.randomItems()
         while (i < quantityItem) {
             pr.addingItem("D")
             i++
