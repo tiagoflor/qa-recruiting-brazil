@@ -52,16 +52,16 @@ abstract class TestPrice {
         assertEquals(175, checkOut.total())
     }
 
-    @Throws(Exception::class) //usado para indicar que esse método pode lançar esse tipo de exceção
+    /*@Throws(Exception::class) //usado para indicar que esse método pode lançar esse tipo de exceção
     fun price(itemNames:String):Int {
         val checkOut = CheckOut()
-        for (i in 0 until itemNames.length)
+        for (i in 0 until itemNames.length) //procurando outra solução para aplicar "scan" / "price" 
         {
             val name = Character.toString(itemNames.get(i))
             val item = PriceRule().withName(name).build()
             checkOut.scan(item)
         }
         return checkOut.total()
-    }
+    }*/
 }
 
